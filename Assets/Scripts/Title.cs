@@ -44,9 +44,10 @@ namespace Scene
 		public override void OnJoinedRoom()
 		{
 			Debug.Log("OnJoinedRoom");
+			PhotonNetwork.automaticallySyncScene = true;
+
 			if (PhotonNetwork.isMasterClient)
 			{
-				PhotonNetwork.automaticallySyncScene = true;
 				PhotonNetwork.LoadLevel("Main");
 			}
 		}
