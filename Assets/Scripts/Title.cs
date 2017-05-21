@@ -11,6 +11,9 @@ namespace Scene
 		[SerializeField]
 		private InputField NameText;
 
+		[SerializeField]
+		private Toggle OfflineToggle;
+
 		public void Start()
 		{
 			ConnectButton.onClick.AddListener(OnClickConnectButton);
@@ -20,9 +23,12 @@ namespace Scene
 		{
 			var playerName = NameText.text;
 			if (string.IsNullOrEmpty(playerName)) return;
+
+			PhotonNetwork.offlineMode = OfflineToggle.isOn;
 			PhotonNetwork.playerName = playerName;
 
 			ConnectButton.interactable = false;
+			OfflineToggle.interactable = false;
 			ConnectButton.GetComponentInChildren<Text>().text = "Connecting...";
 			PhotonNetwork.ConnectUsingSettings(Game.Version);
 		}
