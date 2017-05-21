@@ -9,11 +9,15 @@ namespace CoinPusher
 		private GameObject CoinPrefab;
 
 		[AddTracking]
-		private FP cooldown = 0;
+		public int Coin;
+
+		[AddTracking]
+		private FP Cooldown = 0;
 
 		public override void OnSyncedStart()
 		{
 			tsTransform.position = new TSVector(0.0, 3.0, 0.0);
+			tsTransform.name = "Player_" + owner.Id;
 		}
 
 		public override void OnSyncedInput()
@@ -30,10 +34,14 @@ namespace CoinPusher
 
 		public override void OnSyncedUpdate()
 		{
-			cooldown -= TrueSyncManager.DeltaTime;
-			if (TrueSyncInput.GetByte((byte)InputKey.SpawnCoin) == 0 || cooldown > 0.0) return;
-			TrueSyncManager.SyncedInstantiate(CoinPrefab, tsTransform.position, TSQuaternion.identity);
-			cooldown = 0.2;
+			Cooldown -= TrueSyncManager.DeltaTime;
+			if (TrueSyncInput.GetByte((byte)InputKey.SpawnCoin) == 0 || Cooldown > 0.0 || Coin <= 0) return;
+
+			var position = tsTransform.position;
+			position.x = TSRandom.Range(-3.0f, 3.0f);
+			TrueSyncManager.SyncedInstantiate(CoinPrefab, position, TSQuaternion.identity);
+			Cooldown = 0.2;
+			Coin--;
 		}
 	}
 

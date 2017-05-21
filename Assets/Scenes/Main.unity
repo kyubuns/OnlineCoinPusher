@@ -370,7 +370,7 @@ Transform:
   m_GameObject: {fileID: 713561315}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 3}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 7, y: 1, z: 6}
   m_Children: []
   m_Father: {fileID: 1155685775}
   m_RootOrder: 1
@@ -412,11 +412,11 @@ MonoBehaviour:
       _serializedValue: 0
   lossyScale:
     x:
-      _serializedValue: 21474836480
+      _serializedValue: 30064771072
     y:
       _serializedValue: 4294967296
     z:
-      _serializedValue: 21474836480
+      _serializedValue: 25769803776
   tsTransform: {fileID: 713561319}
   _size: {x: 1, y: 1, z: 1}
 --- !u!114 &713561319
@@ -448,11 +448,11 @@ MonoBehaviour:
       _serializedValue: 4294967296
   _scale:
     x:
-      _serializedValue: 21474836480
+      _serializedValue: 30064771072
     y:
       _serializedValue: 4294967296
     z:
-      _serializedValue: 21474836480
+      _serializedValue: 25769803776
   _serialized: 1
   tsCollider: {fileID: 0}
   tsParent: {fileID: 0}
@@ -563,7 +563,7 @@ Transform:
   m_GameObject: {fileID: 788213133}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 1, z: 5}
+  m_LocalScale: {x: 7, y: 1, z: 6}
   m_Children: []
   m_Father: {fileID: 1155685775}
   m_RootOrder: 0
@@ -590,11 +590,11 @@ MonoBehaviour:
       _serializedValue: 0
   lossyScale:
     x:
-      _serializedValue: 21474836480
+      _serializedValue: 30064771072
     y:
       _serializedValue: 4294967296
     z:
-      _serializedValue: 21474836480
+      _serializedValue: 25769803776
   tsTransform: {fileID: 788213136}
   _size: {x: 1, y: 1, z: 1}
 --- !u!114 &788213136
@@ -626,11 +626,11 @@ MonoBehaviour:
       _serializedValue: 4294967296
   _scale:
     x:
-      _serializedValue: 21474836480
+      _serializedValue: 30064771072
     y:
       _serializedValue: 4294967296
     z:
-      _serializedValue: 21474836480
+      _serializedValue: 25769803776
   _serialized: 1
   tsCollider: {fileID: 0}
   tsParent: {fileID: 0}
@@ -1046,13 +1046,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1351136981}
-  m_LocalRotation: {x: 0.22019324, y: -0, z: -0, w: 0.9754563}
-  m_LocalPosition: {x: 0, y: 3.09, z: -6}
+  m_LocalRotation: {x: 0.23953079, y: -0, z: -0, w: 0.97088873}
+  m_LocalPosition: {x: 0, y: 3.33, z: -6.77}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1462242015}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 25.441002, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 27.718, y: 0, z: 0}
 --- !u!1 &1450856139
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,7 +1257,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.1397059, g: 0.1397059, b: 0.1397059, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:

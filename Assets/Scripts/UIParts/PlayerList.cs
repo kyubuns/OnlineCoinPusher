@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using CoinPusher;
 
 namespace UIParts
 {
@@ -13,28 +14,19 @@ namespace UIParts
 			Text = GetComponent<Text>();
 		}
 
-		public void Start()
-		{
-			UpdateText();
-		}
-
-		public override void OnPhotonPlayerConnected(PhotonPlayer newPlayer)
-		{
-			UpdateText();
-		}
-
-		public override void OnPhotonPlayerDisconnected(PhotonPlayer otherPlayer)
-		{
-			UpdateText();
-		}
-
-		public void UpdateText()
+		public void Update()
 		{
 			Text.text = "";
 			Text.text += string.Format("Players({0})\n", PhotonNetwork.playerList.Length);
 			foreach (var player in PhotonNetwork.playerList)
 			{
-				Text.text += string.Format("- {0}\n", player.NickName);
+				var go = GameObject.Find("Player_" + player.ID);
+				var coin = 0;
+				if (go != null)
+				{
+					coin = go.GetComponent<CoinSpawner>().Coin;
+				}
+				Text.text += string.Format("- {0}: {1}\n", player.NickName, coin);
 			}
 		}
 	}

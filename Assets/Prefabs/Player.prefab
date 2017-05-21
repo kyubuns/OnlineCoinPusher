@@ -61,6 +61,7 @@ MonoBehaviour:
     id: 0
     name: 
   CoinPrefab: {fileID: 1650692348667098, guid: d5adcd96779cb4f75924516482dd5eae, type: 2}
+  Coin: 10
 --- !u!114 &114728466209230552
 MonoBehaviour:
   m_ObjectHideFlags: 1
