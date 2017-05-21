@@ -8,6 +8,9 @@ namespace Scene
 		[SerializeField]
 		private Button ConnectButton;
 
+		[SerializeField]
+		private InputField NameText;
+
 		public void Start()
 		{
 			ConnectButton.onClick.AddListener(OnClickConnectButton);
@@ -15,6 +18,10 @@ namespace Scene
 
 		private void OnClickConnectButton()
 		{
+			var playerName = NameText.text;
+			if (string.IsNullOrEmpty(playerName)) return;
+			PhotonNetwork.playerName = playerName;
+
 			ConnectButton.interactable = false;
 			ConnectButton.GetComponentInChildren<Text>().text = "Connecting...";
 			PhotonNetwork.ConnectUsingSettings(Game.Version);
